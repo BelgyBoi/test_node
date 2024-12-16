@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Control Panel</title>
+</head>
+<body>
+  <button onclick="sendPlayCommand('Chinese_Beaver_With_Original_Cantonese')">Play Chinese Beaver</button>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+
+    function sendPlayCommand(videoId) {
+      socket.emit('playVideo', videoId);
+    }
+  </script>
+</body>
+</html>
